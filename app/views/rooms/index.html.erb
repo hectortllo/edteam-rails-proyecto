@@ -1,0 +1,31 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>¡Bienvenido!</h1>
+      <p class="lead text-muted">
+        En esta página podrás encontrar todas nuestras habitaciones disponibles. Si estás interesado en alguna, ¡solo basta con dar click en <strong>Apartar</strong>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <% @rooms.each do |room| %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm text-center">
+              <%= image_tag room.image %>
+              <div class="card-body">
+                <p class="card-text">
+                  <%= room.description.split(" ").first(15).join(" ") %>
+                </p>
+                <%= link_to 'Detalles', room_path(room), class: 'btn btn-warning' %>
+                <a href="#" class="btn btn-primary ml-4">Apartar</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

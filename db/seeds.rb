@@ -13,7 +13,8 @@ puts "Hotel creado"
     length: rand(10),
     width: rand(10),
     taken: rand(2),
-    image: Faker::Internet.url,
+    image: "http://placehold.it/700x400",
+    description: Faker::Lorem.sentence(word_count: 100),
     hotel_id: Hotel.first.id
   )
 end

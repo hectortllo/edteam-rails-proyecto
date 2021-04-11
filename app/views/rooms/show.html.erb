@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @room.image, style: 'width:100%;' %>
+    </div>
+    <div class="col-md-5">
+      <p><%= @room.description %></p>
+      <p><%= @room.length %></p>
+      <p><%= @room.width %></p>
+      <a href="#" class="btn btn-primary my-3">Apartar</a>
+    </div>
+  </div>
+  <div class="row">
+    <%= link_to 'Volver', rooms_path, class: 'btn btn-secondary my-3' %>
+  </div>
+</div>
