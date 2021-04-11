@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show]
+  before_action :set_room, only: [:show, :edit, :destroy]
 
   def index
     @rooms = Room.all
@@ -22,6 +22,31 @@ class RoomsController < ApplicationController
       else
         format.html { render :new }
       end
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    @room = Room.find(params[:id])
+
+    respond_to do |format|
+      if @room.update(room_params)
+        format.html { redirect_to rooms_path,
+                      notice: 'Room actualizado correctamente'}
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  def destroy
+    @room.destroy
+
+    respond_to do |format|
+      format.html { redirect_to rooms_url,
+                    notice: 'Habitación eliminada' }
     end
   end
 
