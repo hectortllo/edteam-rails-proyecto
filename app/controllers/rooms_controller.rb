@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   before_action :set_room, only: [:show, :edit, :destroy]
 
   def index

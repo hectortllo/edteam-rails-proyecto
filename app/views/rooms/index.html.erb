@@ -10,6 +10,11 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
+      <% if logged_in?(:site_admin) %>
+        <div class="text-center my-3">
+          <%= link_to 'Crear habitación', new_room_path, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
       <div class="row">
         <% @rooms.each do |room| %>
           <div class="col-md-4">

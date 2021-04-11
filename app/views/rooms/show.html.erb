@@ -8,10 +8,12 @@
       <p><%= @room.length %></p>
       <p><%= @room.width %></p>
       <a href="#" class="btn btn-primary my-3">Apartar</a>
-      <div>
-        <%= link_to 'Editar', edit_room_path(@room), class: 'btn btn-warning' %>
-        <%= link_to 'Eliminar', @room, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
-      </div>
+      <% if logged_in?(:site_admin) %>
+        <div>
+          <%= link_to 'Editar', edit_room_path(@room), class: 'btn btn-warning' %>
+          <%= link_to 'Eliminar', @room, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-danger' %>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="row">
