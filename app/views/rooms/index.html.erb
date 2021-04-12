@@ -19,7 +19,7 @@
         <% @rooms.each do |room| %>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm text-center">
-              <%= image_tag room.image %>
+              <%= image_tag (room.image).to_s %>
               <div class="card-body">
                 <p class="card-text">
                   <%= room.description.split(" ").first(15).join(" ") %>
