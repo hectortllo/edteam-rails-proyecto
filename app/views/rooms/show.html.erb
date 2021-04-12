@@ -5,8 +5,8 @@
     </div>
     <div class="col-md-5">
       <p><%= @room.description %></p>
-      <p><%= @room.length %></p>
-      <p><%= @room.width %></p>
+      <p>Largo: <%= @room.length %></p>
+      <p>Ancho: <%= @room.width %></p>
       <a href="#" class="btn btn-primary my-3">Apartar</a>
       <% if logged_in?(:site_admin) %>
         <div>
