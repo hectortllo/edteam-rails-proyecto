@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   }
 
   resources :rooms
-  root to: "pages#home"
+  root to: "rooms#index"
   get "home", to: 'pages#home'
   get "about", to: 'pages#about'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
