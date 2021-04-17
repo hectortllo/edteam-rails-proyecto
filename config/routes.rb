@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     sign_up: 'register'
   }
 
-  resources :rooms
+  resources :rooms do
+    member do
+      get :reserve
+    end
+  end
   root to: "rooms#index"
   get "home", to: 'pages#home'
   get "about", to: 'pages#about'

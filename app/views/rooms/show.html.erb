@@ -7,7 +7,10 @@
       <p><%= @room.description %></p>
       <p>Largo: <%= @room.length %></p>
       <p>Ancho: <%= @room.width %></p>
-      <a href="#" class="btn btn-primary my-3">Apartar</a>
+      <% if !@room.taken %>
+        <%= link_to 'Apartar', reserve_room_path(@room), class: 'my-3 btn btn-success' %>
+      <% end %>
+      <!-- <a href="#" class="btn btn-primary my-3">Apartar</a> -->
       <% if logged_in?(:site_admin) %>
         <div>
           <%= link_to 'Editar', edit_room_path(@room), class: 'btn btn-warning' %>

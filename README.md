@@ -1,24 +1,25 @@
-# README
+# Proyecto del curso de RoR desde 0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### INFORMACIÓN IMPORTANTE
 
-Things you may want to cover:
+Si lo que quieres es ver la solución al reto, debes ir a la rama llamada 'reto'. Ahí está el código agregado.
+En este archivo estará la explicación de lo que debes hacer para solucionar el reto.
 
-* Ruby version
+##### Los archivos a modificar son 4:
 
-* System dependencies
+- app/views/rooms/index.html.erb
+- app/views/rooms/show.html.erb
+- app/controllers/rooms_controller.rb
+- config/routes.rb
 
-* Configuration
+Los cambios fueron:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- routes.rb
+  - Se cambió la forma de `resources :rooms`
+- rooms_controller
+  - Se agregó otro método: `reserve`
+  - Se agregó el método `reserve` al callback `before_action`
+- index.html.erb
+  - Se editó el botón para 'Apartar' una habitación
+- show.html.erb
+  - Se editó el botón para 'Apartar' una habitación

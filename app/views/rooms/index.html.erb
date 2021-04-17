@@ -25,7 +25,10 @@
                   <%= room.description.split(" ").first(15).join(" ") %>
                 </p>
                 <%= link_to 'Detalles', room_path(room), class: 'btn btn-warning' %>
-                <a href="#" class="btn btn-primary ml-4">Apartar</a>
+                <% if !room.taken %>
+                  <%= link_to 'Apartar', reserve_room_path(room), class: 'btn btn-success' %>
+                <% end %>
+                <!-- <a href="#" class="btn btn-primary ml-4">Apartar</a> -->
               </div>
             </div>
           </div>
