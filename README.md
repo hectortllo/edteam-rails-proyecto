@@ -2,6 +2,8 @@
 
 #### INFORMACIÓN IMPORTANTE
 
+Para poder agregar esta parte a tu proyecto, debes llegar al video final del curso. Sino, no entenderás de qué estoy hablando.
+
 Si lo que quieres es ver la solución al reto, debes ir a la rama llamada 'rooms'. Ahí está el código agregado.
 En este archivo estará la explicación de lo que debes hacer para solucionar el reto.
 
