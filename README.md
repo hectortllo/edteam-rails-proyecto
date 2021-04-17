@@ -8,11 +8,13 @@ Si lo que quieres es ver la solución al reto, debes ir a la rama llamada 'rooms
 En este archivo estará la explicación de lo que debes hacer para solucionar el reto.
 
 ##### Los archivos a modificar son 4:
+Visita estos archivos en la rama 'rooms', para ver exactamente qué se cambió. 
 
 - app/views/rooms/index.html.erb
 - app/views/rooms/show.html.erb
 - app/controllers/rooms_controller.rb
 - config/routes.rb
+
 
 Los cambios fueron:
 
