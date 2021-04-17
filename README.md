@@ -2,7 +2,7 @@
 
 #### INFORMACIÓN IMPORTANTE
 
-Si lo que quieres es ver la solución al reto, debes ir a la rama llamada 'reto'. Ahí está el código agregado.
+Si lo que quieres es ver la solución al reto, debes ir a la rama llamada 'rooms'. Ahí está el código agregado.
 En este archivo estará la explicación de lo que debes hacer para solucionar el reto.
 
 ##### Los archivos a modificar son 4:
